@@ -1,0 +1,108 @@
+{
+  "run_utc": "2026-11-11 05:17",
+  "run_wib": "2026-11-11 12:17",
+  "baseline": true,
+  "rules": [
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+  ],
+  "indexes": {
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/llms.txt": {
+      "ok": true,
+      "http_status": 200,
+      "error": null,
+      "chars": 47550,
+      "pages_found": 302
+    }
+  },
+  "pages_checked": 6,
+  "pages_failed": 0,
+  "pages_changed": 0,
+  "pages_new": 0,
+  "removed_pages": [],
+  "pages": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 59950,
+      "sha256": "0a5d1a970c11e6e5bb9dfdf6cf853b5a48b4da11efa83fe6164d24dbe4cbbefb",
+      "sections": 57,
+      "updated_date": null,
+      "changed": false
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/ai-providers",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__ai-providers.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 6616,
+      "sha256": "ac8582251c8ca81014d84cf75faab96222b5be8b09ecac4326d587ecab400b8f",
+      "sections": 9,
+      "updated_date": null,
+      "changed": false
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/authentication-international-rates",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__authentication-international-rates.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 19357,
+      "sha256": "e003332c3224283ad74aaebd7a27fefc4c6a6c654ececb07c90c951268b76438",
+      "sections": 24,
+      "updated_date": null,
+      "changed": false
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/change-billing-currency",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__change-billing-currency.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 16614,
+      "sha256": "8dd6686d367c9e96b1166f1de8f6682fe2131ab1b8ad6af8ae10b74029eb9004",
+      "sections": 23,
+      "updated_date": null,
+      "changed": false
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/conversation-based-pricing",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__conversation-based-pricing.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 21795,
+      "sha256": "2b906c86e73e26d9e73a175b7ce8b5706c66ca71b74f76bc9b2be5faee302d07",
+      "sections": 21,
+      "updated_date": null,
+      "changed": false
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__non-template-messages.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": false,
+      "chars": 20758,
+      "sha256": "e6b3857022017ff2bff5f21adbac1ca5e36c37c6ebf0ca84f2eac3e0c4fe769d",
+      "sections": 18,
+      "updated_date": null,
+      "changed": false
+    }
+  ]
+}
