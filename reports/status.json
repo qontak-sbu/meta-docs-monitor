@@ -1,7 +1,7 @@
 {
-  "run_utc": "2026-11-11 05:17",
-  "run_wib": "2026-11-11 12:17",
-  "baseline": true,
+  "run_utc": "2026-11-11 05:29",
+  "run_wib": "2026-11-11 12:29",
+  "baseline": false,
   "rules": [
     "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
   ],
@@ -32,7 +32,9 @@
       "sha256": "0a5d1a970c11e6e5bb9dfdf6cf853b5a48b4da11efa83fe6164d24dbe4cbbefb",
       "sections": 57,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 59950,
+      "previous_updated_date": null
     },
     {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/ai-providers",
@@ -46,7 +48,9 @@
       "sha256": "ac8582251c8ca81014d84cf75faab96222b5be8b09ecac4326d587ecab400b8f",
       "sections": 9,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 6616,
+      "previous_updated_date": null
     },
     {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/authentication-international-rates",
@@ -60,7 +64,9 @@
       "sha256": "e003332c3224283ad74aaebd7a27fefc4c6a6c654ececb07c90c951268b76438",
       "sections": 24,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 19357,
+      "previous_updated_date": null
     },
     {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/change-billing-currency",
@@ -74,7 +80,9 @@
       "sha256": "8dd6686d367c9e96b1166f1de8f6682fe2131ab1b8ad6af8ae10b74029eb9004",
       "sections": 23,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 16614,
+      "previous_updated_date": null
     },
     {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/conversation-based-pricing",
@@ -88,7 +96,9 @@
       "sha256": "2b906c86e73e26d9e73a175b7ce8b5706c66ca71b74f76bc9b2be5faee302d07",
       "sections": 21,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 21795,
+      "previous_updated_date": null
     },
     {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages",
@@ -102,7 +112,9 @@
       "sha256": "e6b3857022017ff2bff5f21adbac1ca5e36c37c6ebf0ca84f2eac3e0c4fe769d",
       "sections": 18,
       "updated_date": null,
-      "changed": false
+      "changed": false,
+      "previous_chars": 20758,
+      "previous_updated_date": null
     }
   ]
 }
