@@ -26,10 +26,15 @@ jobs:
         run: |
           git config user.name "meta-docs-monitor"
           git config user.email "meta-docs-monitor@users.noreply.github.com"
+          # Show the nearest markdown heading with every change
+          echo "*.md diff=markdown" > .git/info/attributes
           git add -A pages
-          git diff --cached --no-color -- pages > reports/latest.diff
-          if [ -s reports/latest.diff ]; then
-            cp reports/latest.diff "reports/history/$(TZ=Asia/Jakarta date +%F).diff"
+          git diff --cached --no-color --function-context -- pages > reports/latest.diff
+          # Keep a dated history (skipped for the first, baseline run)
+          DAY=$(TZ=Asia/Jakarta date +%F)
+          if [ -s reports/latest.diff ] && ! grep -q '"baseline": true' reports/status.json; then
+            cat reports/latest.diff >> "reports/history/$DAY.diff"
+            grep -qx "$DAY.diff" reports/history/index.txt 2>/dev/null || echo "$DAY.diff" >> reports/history/index.txt
           fi
           git add -A pages reports
           git commit -m "Docs snapshot $(TZ=Asia/Jakarta date '+%F %H:%M') WIB" || echo "Nothing to commit"
