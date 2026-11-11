@@ -1,0 +1,36 @@
+name: Fetch Meta docs
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 00:30 UTC = 07:30 WIB, daily (before the Claude task)
+  workflow_dispatch:        # "Run workflow" button for manual tests
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-meta-docs
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download pages
+        run: python3 fetch.py
+
+      - name: Save exact diff and commit
+        run: |
+          git config user.name "meta-docs-monitor"
+          git config user.email "meta-docs-monitor@users.noreply.github.com"
+          git add -A pages
+          git diff --cached --no-color -- pages > reports/latest.diff
+          if [ -s reports/latest.diff ]; then
+            cp reports/latest.diff "reports/history/$(TZ=Asia/Jakarta date +%F).diff"
+          fi
+          git add -A pages reports
+          git commit -m "Docs snapshot $(TZ=Asia/Jakarta date '+%F %H:%M') WIB" || echo "Nothing to commit"
+          git push
