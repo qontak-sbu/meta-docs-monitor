@@ -1,0 +1,5 @@
+# Meta Docs Monitor - watched pages
+# One page URL per line (without .md). Each line covers that page AND every
+# child page under it listed in Meta's llms.txt index.
+# Keep this in sync with the Watchlist tab in the Google Sheet.
+https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing
