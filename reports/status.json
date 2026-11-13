@@ -1,6 +1,6 @@
 {
-  "run_utc": "2026-11-12 01:47",
-  "run_wib": "2026-11-12 08:47",
+  "run_utc": "2026-11-13 01:41",
+  "run_wib": "2026-11-13 08:41",
   "baseline": false,
   "rules": [
     "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
@@ -10,14 +10,14 @@
       "ok": true,
       "http_status": 200,
       "error": null,
-      "chars": 47550,
-      "pages_found": 302
+      "chars": 51428,
+      "pages_found": 323
     }
   },
-  "pages_checked": 6,
+  "pages_checked": 8,
   "pages_failed": 0,
   "pages_changed": 0,
-  "pages_new": 0,
+  "pages_new": 2,
   "removed_pages": [],
   "pages": [
     {
@@ -101,6 +101,20 @@
       "previous_updated_date": null
     },
     {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/deprecated",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__deprecated.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": true,
+      "chars": 57766,
+      "sha256": "a25703d2f0c45873c286da3664871b17401dc4f29d086227819b6ffd1263022a",
+      "sections": 46,
+      "updated_date": null,
+      "changed": false
+    },
+    {
       "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages",
       "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
       "file": "pages/pricing__non-template-messages.md",
@@ -115,6 +129,20 @@
       "changed": false,
       "previous_chars": 20758,
       "previous_updated_date": null
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/prepaid-billing",
+      "rule": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+      "file": "pages/pricing__prepaid-billing.md",
+      "http_status": 200,
+      "ok": true,
+      "error": null,
+      "new_page": true,
+      "chars": 12349,
+      "sha256": "0c0c769c6f37dd050e6bd6a5f6332614360277275479c27c4330e466d0c4fb0a",
+      "sections": 15,
+      "updated_date": null,
+      "changed": false
     }
   ]
 }
