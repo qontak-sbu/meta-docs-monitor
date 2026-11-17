@@ -1,6 +1,6 @@
 {
-  "run_utc": "2026-11-16 01:55",
-  "run_wib": "2026-11-16 08:55",
+  "run_utc": "2026-11-17 01:47",
+  "run_wib": "2026-11-17 08:47",
   "baseline": false,
   "rules": [
     "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
@@ -10,8 +10,8 @@
       "ok": true,
       "http_status": 200,
       "error": null,
-      "chars": 51428,
-      "pages_found": 323
+      "chars": 51692,
+      "pages_found": 324
     }
   },
   "pages_checked": 8,
