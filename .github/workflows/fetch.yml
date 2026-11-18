@@ -2,7 +2,8 @@ name: Fetch Meta docs
 
 on:
   schedule:
-    - cron: "30 0 * * *"   # 00:30 UTC = 07:30 WIB, daily (before the Claude task)
+      - cron: "10 21 * * *"   # 21:10 UTC = 04:10 WIB, daily (GitHub often starts ~1h late)
+      - cron: "10 23 * * *"   # 23:10 UTC = 06:10 WIB, backup run
   workflow_dispatch:        # "Run workflow" button for manual tests
 
 permissions:
