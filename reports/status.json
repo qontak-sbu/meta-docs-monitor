@@ -1,6 +1,6 @@
 {
-  "run_utc": "2026-11-18 23:54",
-  "run_wib": "2026-11-19 06:54",
+  "run_utc": "2026-11-19 21:54",
+  "run_wib": "2026-11-20 04:54",
   "baseline": false,
   "rules": [
     "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
@@ -10,13 +10,13 @@
       "ok": true,
       "http_status": 200,
       "error": null,
-      "chars": 51692,
-      "pages_found": 324
+      "chars": 52842,
+      "pages_found": 331
     }
   },
   "pages_checked": 8,
   "pages_failed": 0,
-  "pages_changed": 0,
+  "pages_changed": 1,
   "pages_new": 0,
   "removed_pages": [],
   "pages": [
@@ -28,11 +28,11 @@
       "ok": true,
       "error": null,
       "new_page": false,
-      "chars": 59950,
-      "sha256": "0a5d1a970c11e6e5bb9dfdf6cf853b5a48b4da11efa83fe6164d24dbe4cbbefb",
+      "chars": 60698,
+      "sha256": "9a2ba58a59f8822915bcc37a0a9687d2d38d2ac4347b62632b7524413c2ae1fe",
       "sections": 57,
       "updated_date": null,
-      "changed": false,
+      "changed": true,
       "previous_chars": 59950,
       "previous_updated_date": null
     },

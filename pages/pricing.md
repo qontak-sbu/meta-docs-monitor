@@ -194,6 +194,8 @@ As Meta resumes charging for service messages, Meta provides every business phon
 - Unused service messages in the free tier do not roll over to the next month. The free tier resets monthly for each business phone number (for example, 1,000 for October with no roll-over; 1,000 for November with no roll-over). This reset happens at 12am by Messaging account timezone.
 - If businesses do not have a payment method for their Messaging account(s), Meta will deliver service messages within the free tier but _not_ deliver them after the free tier has been used. To ensure continuity of service messages as of October 1, 2026, please ensure you have a payment method in [Billing Hub](https://business.facebook.com/latest/billing_hub/).
 
+Status [messages](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status) webhooks for service messages delivered within the free tier include a `subtype` field set to `free_tier` in the pricing object.
+
 When Meta begins to charge – as of the 1,001st service message each month – the pricing type (`&lt;PRICING_TYPE&gt;`) in the pricing object of status [messages](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status) webhooks for messages with a pricing category (`&lt;PRICING_CATEGORY&gt;`) of service will change from `free_customer_service` to `regular` as outlined below:
 
 | Which service messages | Through Sep. 30, 2026 | Through Sep. 30, 2026 | As of Oct. 1, 2026 | As of Oct. 1, 2026 | `type` | Charged | `type` | Charged |
@@ -208,7 +210,8 @@ When Meta begins to charge – as of the 1,001st service message each month – 
   &quot;billable&quot;: false,
   &quot;pricing_model&quot;: &quot;PMP&quot;,
   &quot;type&quot;: &quot;free_customer_service&quot;,
-  &quot;category&quot;: &quot;service&quot;
+  &quot;category&quot;: &quot;service&quot;,
+  &quot;subtype&quot;: &quot;free_tier&quot;
 &#125;
 ```
 
@@ -701,12 +704,12 @@ For organizations Meta has identified as eligible, this policy will apply as of 
 
 There are two ways for Solution Providers and businesses to understand eligibility for this policy:
 
-- As of October 12, 2026, via webhooks. Ingest the new `subtype` field to build a view of which Messaging accounts are eligible.
+- As of October 12, 2026, via webhooks. Ingest the `paid_exempt` value of the new `subtype` field to build a view of which Messaging accounts are eligible.
 - As of October 23, 2026, via the `service_pricing_policy` field. This scales better: you can query any or all of the Messaging accounts you manage, and Meta confirms which are eligible.
 
 **New `subtype` field in webhooks**
 
-Status [messages](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status) webhooks include a new `subtype` field in the pricing object. Service messages that are free because the organization is eligible for this policy have `subtype` set to `paid_exempt`.
+Status [messages](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status) webhooks include a new `subtype` field in the pricing object. Service messages that are free because the organization is eligible for this policy have `subtype` set to `paid_exempt`. Service messages that are free because they were delivered within the business phone number&#039;s [free tier](#free-tier-of-monthly-service-messages) have `subtype` set to `free_tier` instead, so only `paid_exempt` indicates eligibility.
 
 Example pricing object in a [status messages webhook](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status), for a service message from an eligible government or non-profit organization:
 
@@ -724,6 +727,7 @@ Example pricing object in a [status messages webhook](https://developers.faceboo
 
 - `type` is `free_customer_service`, or `free_group_customer_service` for group messages.
 - `subtype` is `paid_exempt` when the service message is free because the organization is eligible for this policy.
+- `subtype` is `free_tier` when the service message is free because it was delivered within the business phone number&#039;s monthly free tier. It does not indicate eligibility.
 
 **New `service_pricing_policy` field on accounts**
 
