@@ -1,6 +1,6 @@
 {
-  "run_utc": "2026-11-24 21:59",
-  "run_wib": "2026-11-25 04:59",
+  "run_utc": "2026-11-24 23:53",
+  "run_wib": "2026-11-25 06:53",
   "baseline": false,
   "rules": [
     "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
